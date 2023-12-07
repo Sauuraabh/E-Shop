@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "7e14f1f3-a6f4-4756-8279-26a29f6a65f9",
+		"name": "eShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28628930"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"firstName\": \"ishwar\",\r\n \"lastName\": \"soni\",\r\n \"email\": \"ishwar.soni@upgrad.com\",\r\n \"password\": \"password\",\r\n \"phone\": 1234567890\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"badrish@upgrad.com\",\r\n \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJCYWRyaXNoOTYiLCJpYXQiOjE3MDAyNjcxNjAsImV4cCI6MTcwMDI4NzE2MH0.AMwsL_cHgw4xF0ogNJGqTWuE9b5UC4iWXPmJaUdZKWQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"addressId\": 55,\r\n \"name\": \"John Snow\",\r\n \"phone\": \"9091929394\",\r\n \"street\": \"The Castle Street\",\r\n \"landmark\": \"Castle\",\r\n \"city\": \"WinterFell\",\r\n \"state\": \"The North\",\r\n \"zipCode\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/auth/addaddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"auth",
+						"addaddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVVNFUiIsImlhdCI6MTY5ODcwNDUxMiwiZXhwIjoxNjk4NzI0NTEyfQ.Q5MS41Xp79yIAgVd1P4N9YqbTnMv0PNJRdW8sVG_W1s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"productId\": 1,\r\n            \"name\": \"Egg\",\r\n            \"category\": \"Food\",\r\n            \"price\": 10.0,\r\n            \"description\": \"2 eggs\",\r\n            \"manufacturer\": \"Chicken King\",\r\n            \"availableItems\": 25,\r\n            \"imageUrl\": \"http://img5a.flixcart.com/image/sun-shade/5/2/y/pp48-car-magnetic-himmlisch-1100x1100-imaegujvyzrc8eh6.jpeg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/auth/saveproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"auth",
+						"saveproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJCYWRyaXNoOTYiLCJpYXQiOjE3MDA1NTMxMzAsImV4cCI6MTcwMDU3MzEzMH0.VL_yZ_b9lEk8IQdMoMZNu0srwIpYqvlbGyagssYOYJY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"productId\": 1,\r\n \"addressId\": 1,\r\n \"quantity\" : 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/auth/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"auth",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/findproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"findproduct"
+					],
+					"query": [
+						{
+							"key": "direction",
+							"value": "DESC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/getproductcategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"getproductcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/getproductcategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"getproductcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/updateproduct/6556a33e1a2734ba470d238c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"updateproduct",
+						"6556a33e1a2734ba470d238c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE1JTiIsImlhdCI6MTcwMDI2Mzg2NCwiZXhwIjoxNzAwMjgzODY0fQ.u16KxBCTYlDia_5vEKKRA3hH-KPyaaw6pzobnCrMY_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eshop/api/v1/deleterestaurant/6556a3b11a2734ba470d2392",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eshop",
+						"api",
+						"v1",
+						"deleterestaurant",
+						"6556a3b11a2734ba470d2392"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
